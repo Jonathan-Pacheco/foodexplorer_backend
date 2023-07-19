@@ -40,3 +40,7 @@ app.use("/files", express.static(uploadConfig.UPLOADS_FOLDER));
 
 const PORT = process.env.PORT || 3333;
 app.listen(PORT, () => console.log(`Server is running on Port ${PORT}`));
+
+app.get('/',(request,response)=>{
+    response.send([{'status':"Running"}])
+ })
